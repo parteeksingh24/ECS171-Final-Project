@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ECS 171 Final Project</title>
+</head>
+<body>
+    <h1>Forest Fires Dataset</h1>
+    <h2>df.head(5) output</h2>
+
+    <div>
+        {{ items[0] | safe }}
+    </div>
+
+    <h2>Variable Correlations Heatmap:</h2>
+    <img src="data:image/png;base64,{{ items[1] | safe }}" alt="Heatmap">
+
+    {% if greeting %}
+        <p>{{ greeting }}</p>
+    {% endif %}
+
+    <form method="POST" action="/">
+        {{ form.csrf_token }}
+        {{ form.name.label }} {{ form.name(size=20) }}
+        {{ form.submit() }}
+    </form>
+</body>
+</html>
