@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ECS 171 Final Project</title>
+</head>
+<body>
+    <h1>Forest Fires Dataset</h1>
+    <h2>&nbsp;SVR Model</h2>
+    <h4>&nbsp;&nbsp;To predict, the observation must have the following features.</h4>
+    <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;{{ items[4] | safe }}
+    </p>
+
+    <form method="POST" action="/SVR">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        {{ form.csrf_token }}
+        {{ form.name.label }} {{ form.name(size=100) }}
+        {{ form.submit() }}
+    </form>
+
+    {% if answer %}
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Predicted Area Burned: {{ answer }} ha</p>
+    {% endif %}
+</body>
+</html>

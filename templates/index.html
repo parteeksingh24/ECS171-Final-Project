@@ -4,6 +4,12 @@
     <title>ECS 171 Final Project</title>
 </head>
 <body>
+    <style>
+        .newline-needed {
+            white-space: pre-line;
+        }
+    </style>
+
     <h1>Forest Fires Dataset</h1>
     <h2>df.head(5) output</h2>
 
@@ -14,14 +20,29 @@
     <h2>Variable Correlations Heatmap:</h2>
     <img src="data:image/png;base64,{{ items[1] | safe }}" alt="Heatmap">
 
-    {% if greeting %}
-        <p>{{ greeting }}</p>
-    {% endif %}
+    <p class="newline-needed">
+        SGD Model - RMSE: 16.76 R2: -0.11 MAE: 7.17
+        MLP Model - RMSE: 16.64 R2: -0.10 MAE: 7.53
+        SVR Model - RMSE: 17.00 R2: -0.15 MAE: 7.08
+    </p>
 
-    <form method="POST" action="/">
-        {{ form.csrf_token }}
-        {{ form.name.label }} {{ form.name(size=20) }}
-        {{ form.submit() }}
-    </form>
+    <button onclick="redirectToSGD()">Gradient Descent Model</button>
+    <button onclick="redirectToMLP()">MLP Model</button>
+    <button onclick="redirectToSVR()">SVR Model</button>
+
+    <script>
+        function redirectToSGD() {
+            // Redirect to the 'other_page' URL
+            window.location.href = '/SGD';
+        }
+        function redirectToMLP() {
+            // Redirect to the 'other_page' URL
+            window.location.href = '/MLP';
+        }
+        function redirectToSVR() {
+            // Redirect to the 'other_page' URL
+            window.location.href = '/SVR';
+        }
+    </script>
 </body>
 </html>
