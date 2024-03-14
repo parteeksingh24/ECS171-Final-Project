@@ -1,12 +1,14 @@
+# Flask Libraries
 from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
-import matplotlib.pyplot as plt
+
+# Python default libraries
 from io import BytesIO
 import base64
 import ast
 
-# Import libraries
+# Machine learning libraries
 import seaborn as sns
 import pandas as pd
 import numpy as np
@@ -19,7 +21,6 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.linear_model import SGDRegressor
 from sklearn.neural_network import MLPRegressor
 from sklearn.svm import SVR
-from itertools import product
 
 items = []
 
